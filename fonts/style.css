@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: cherrybomb;
+    src: url(/fonts/CherryBomb-Regular.ttf);
+}
+
+body{
+    background-color: rgb(198, 219, 198);
+}
+
+main{
+    margin: 5%;
+    background-image: url(/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header{
+    margin: 5% 10%;
+    display:flex;
+    justify-content: space-between;
+}
+
+/* de 1920 hasta 1300 width estamos barbaro */
+
+.header__main{
+    display: flex;
+    align-items:center;
+}
+
+.header__main-icon{
+    position: relative;
+}
+
+.header__main-title{    
+    color: #E54545;
+    font-family: cherrybomb;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.contact{
+    color: rgb(202, 202, 202);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container__sections{
+    display: flex;
+    justify-content: space-around;
+    padding: 10%;    
+}
+.sections__selector{
+    width: 20%;
+    height: 10vw;
+    background-color: #E54545;
+    box-shadow: 8px 5px 5px #1f1515;
+    opacity: 0.85;
+    border-radius: 7px;
+}
+
+.sections__selector-title{
+    font-size: medium;
+    text-align: center;
+}
+
+.sections__selector-pharagraph{
+    font-family: caveat;
+}
+
+.container{
+    margin: 7vh;
+    text-align: center;
+}
+
+.main__pharagraph{
+    padding: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-family: caveat;
+    font-size: larger;
+}
+
+.section{
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section__main{
+    margin-bottom: 35px;
+    background-color: rgba(24, 135, 56, 0.8);
+    box-shadow: 8px 5px 5px #121813;
+    opacity: 0.85;
+    border-radius: 7px;
+    height: 100px;
+}
+
+.section .section__form{
+    column-count: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column-left{
+    width: 187px;
+}
+
+.column-left input {
+    margin-bottom: 20px;
+}
+
+.column-right input {
+    margin-bottom: 20px;
+}
+
+.column-right{
+    float: right;
+    width: 187px;
+}
+
+.section img{
+    height: 18px;
+}
