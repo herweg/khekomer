@@ -33,7 +33,7 @@ body{
 
 main{
     margin: 5%;
-    background-image: url(/img/background.jpg);
+    background-image: url(img/background.jpg);
     background-repeat: no-repeat bottom;
     background-size: 100%;
 }
