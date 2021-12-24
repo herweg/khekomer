@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khekomer</title>
+    <link rel="icon" href="/img/Logo.png" type="image/icon type">
 
     <!-- Css local -->
     <link rel="stylesheet" href="/fonts/style.css">
@@ -30,29 +31,27 @@
         </nav>
     </header>
     <main>
-        <p>AAAAAAAAAA</p>
+        <p>.</p>
         <div class="container section__main">
             <p class="main__pharagraph">Puede ser por la velocidad con la que corre nuestro día, por no tener un
                 recetario a mano, o por no saber como combinar <br>esos cuatro ingredientes que tenes en la heladera que
                 parecen no tener sincronía. <br>
                 Sea cual sea la razón, en Khekomer guiaremos a que te encuentres con la receta que tanto anhelas!</p>
         </div>
-        <div class="container__sections">
+        <!-- <div class="container__sections">
             <div class="sections__selector">
-                <h3 class="sections__selector-title">Me estoy cuidando</h3>
-                <p class="sections__selector-pharagraph">Filtro por propiedades</p>
+                <h3 class="sections__selector-title"></h3>
+                <p class="sections__selector-pharagraph"></p>
             </div>
             <div class="sections__selector">
-                <h3 class="sections__selector-title">¿Que ingredientes tenes?</h3>
-                <p class="sections__selector-pharagraph">Cebolla, queso y huevos. <br>¿De cuantas formas podrán
-                    combinarse?</p>
+                <h3 class="sections__selector-title"></h3>
+                <p class="sections__selector-pharagraph"></p>
             </div>
             <div class="sections__selector">
-                <button id="BTNrandomRecipe" onclick="getRecipe()" class="sections__selector-title">Sorprendeme!</button>
-                <p class="sections__selector-pharagraph">Una receta aleatoria. <br> Clicar un boton es bastante
-                    sencillo, pero ¿Serás tan valiente como para animarte a probarla?</p>
+                <h3 id="BTNrandomRecipe"class="sections__selector-title"></h3>
+                <p class="sections__selector-pharagraph"></p>
             </div>
-        </div>
+        </div> -->
 
 
 
@@ -61,10 +60,8 @@
             <div class="section-container">
                 <div class="section__main">
                     <h3 class="section__main-title">Me estoy cuidando</h3>
-                    <p class="section__main-description">Filtro por propuedades alimenticias</p>
-                    <p class="section__main-tips">Podes usar cuantos filtros desees, pero recomendamos usar solo uno a
-                        la vez (por busqueda).
-                        En general las recetas no estan super detalladas, por lo que puede acortar tu rango de busqueda.
+                    <p class="section__main-description">Filtro por propiedades alimenticias</p>
+                    <p class="section__main-tips">
                     </p>
                 </div>
                 <div class="section__form">
@@ -74,6 +71,7 @@
                         <input type="text" placeholder="Grasas totales"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
                         <input type="text" placeholder="Grasas saturadas"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
                     </div>
+                    <button>Send</button>
                     <div class="column-right">
                         <input type="text" placeholder="Intolerancias"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
                         <input type="text" placeholder="Colesterol"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
@@ -85,7 +83,9 @@
             <div class="section-container">
                 <div class="section__main">
                     <h3 class="section__main__title">¿Que ingredientes tenes?</h3>
-                    <p class="section__main-description">Ingresa los ingredientes con los que desees buscar una receta
+                    <p class="section__main-description">Ingresa los ingredientes con los que desees buscar una receta <br>
+                        Cebolla, queso y huevos. <br>¿De cuantas formas podrán
+                    combinarse?
                     </p>
                     <p class="section__main-tips"></p>
                 </div>
@@ -96,12 +96,14 @@
                         <input type="text" placeholder="Grasas totales"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
                         <input type="text" placeholder="Grasas saturadas"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
                     </div>
+                    <button>Send</button>
                 </div>
             </div>
             <div class="section-container">
                 <div class="section__main">
                     <h3 class="section__main__title">Sorprendeme!</h3>
-                    <p class="section__main-description">Una receta sorpresa a solo un click de distancia!</p>
+                    <p class="section__main-description">Una receta sorpresa a solo un click de distancia!<br> 
+                        Clicar un boton es bastante sencillo, pero ¿Serás tan valiente como para animarte a probarla?</p>
                     <p class="section__main-tips"></p>
                 </div>
                 <div class="section__form">
@@ -110,6 +112,7 @@
                         <input type="text" placeholder="Proteinas"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
                         <input type="text" placeholder="Grasas totales"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
                     </div>
+                    <button onclick="getRecipe()">Send</button>
                     <div class="column-right">
                         <input type="text" placeholder="Intolerancias"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
                         <input type="text" placeholder="Colesterol"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
