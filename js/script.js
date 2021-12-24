@@ -28,13 +28,19 @@ async function getRecipe(reqRecipe, reqParameters){
 
     var data = document.getElementById("recipe__description");
 
-    for (let i = 0; i < recipe.length; i++) {
-        const element = recipe[i];
+    data.textContent = recipe.recipes[0].title;
+    data.textContent += recipe.recipes[0].summary;
+    data.textContent += recipe.recipes[0].extendedIngredients;
+    data.textContent += recipe.recipes[0].instructions;
 
-        var div = document.createElement("div");
-        div.innerHTML = recipe[i];
-        data.appendChild(div);
-    }
+
+    // for (let i = 0; i < recipe.length; i++) {
+    //     const element = recipe[i];
+
+    //     var div = document.createElement("div");
+    //     div.innerHTML = recipe[i];
+    //     data.appendChild(div);
+    // }
 
 };
 
