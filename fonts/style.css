@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+:root{
+    --primary-color:#E54545;
+}
 
 /* 
 
@@ -21,7 +23,7 @@ de 1920 hasta 700 width estamos barbaro (=
 
 @font-face {
     font-family: cherrybomb;
-    src: url(fonts/CherryBomb-Regular.ttf);
+    src: url(/fonts/CherryBomb-Regular.ttf);
 }
 
 body{
@@ -33,7 +35,7 @@ body{
 
 main{
     margin: 5%;
-    background-image: url(img/background.jpg);
+    background-image: url(/img/background.jpg);
     background-repeat: no-repeat bottom;
     background-size: 100%;
 }
@@ -167,4 +169,25 @@ input.collapsible__menu-checkbox {
 }
 #type:checked ~ .menu__intolerances{
     max-height: 100%;
+}
+
+/* RECIPE */
+
+.recipe{
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.recipe__title{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.recipe__description{
+    font-family: caveat;
 }

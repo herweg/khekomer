@@ -10,44 +10,31 @@ var reqDiet = [];
 var reqType = [];
 var reqParams = "&intolerances="+reqIntolerances+"&diet="+reqDiet+"&type="+reqType;
 
-var form = document.getElementById("random__form");
-    inputs = form.getElementsByTagName
-
-
-
-
-function getParameters(){
-    reqIntolerances.push(document.getElementById("testintoler").value);
-};
-
-
 async function getRecipe(reqRecipe, reqParameters){
     let response = await fetch(reqRecipe+SPOONACULAR_KEY+reqParameters);
     recipe = await response.json();
+
+    let recipeStored = JSON.stringify(recipe);
+    sessionStorage.setItem("recipe",recipeStored);
+
     console.log(recipe);
 
-    var data = document.getElementById("recipe__description");
-
-    data.textContent = recipe.recipes[0].title;
-    data.textContent += recipe.recipes[0].summary;
-    data.textContent += recipe.recipes[0].extendedIngredients;
-    data.textContent += recipe.recipes[0].instructions;
-
-
-    // for (let i = 0; i < recipe.length; i++) {
-    //     const element = recipe[i];
-
-    //     var div = document.createElement("div");
-    //     div.innerHTML = recipe[i];
-    //     data.appendChild(div);
-    // }
-
+    window.location.href="recipe.html"
 };
 
-/*document.getElementById("BTNrandomRecipe").addEventListener("click", getRecipe());
+document.getElementById("submit-btn").addEventListener("click",function (){getRecipe(ASK_RANDOM_RECIPE, reqParams)})
 
-? number=1 & tags=vegetarian,dessert
 
-? intolerances=  {} , {}  , {}  &  tags= {} , {}
+// document.addEventListener('DOMContentLoaded', function() {
 
-*/
+// });
+
+// var form = document.getElementById("random__form");
+//     inputs = form.getElementsByTagName
+
+//     https://stackoverflow.com/questions/7400325/how-to-add-the-values-from-checkboxes-to-an-array
+
+
+// function getParameters(){
+//     reqIntolerances.push(document.getElementById("testintoler").value);
+// };
