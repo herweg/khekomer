@@ -3,12 +3,27 @@ const ASK_PROPERTIES_RECIPE = "https://api.spoonacular.com/recipes/findByNutrien
 const ASK_INGREDIENTS_RECIPE = "https://api.spoonacular.com/recipes/findByIngredients"; //params: &ingredients, &ignorePantry=true
 const ASK_RANDOM_RECIPE = "https://api.spoonacular.com/recipes/random"; //params: &intolerances, &diet, &meal type (&type)
 
+const RECIPE_INTOLERANCES = document.getElementsByName("intolerances").value;
+
 var recipe = {};
 
 var reqIntolerances = [];
 var reqDiet = [];
 var reqType = [];
-var reqParams = "&intolerances="+reqIntolerances+"&diet="+reqDiet+"&type="+reqType;
+
+function getCheckboxValues(form){
+    var values= [];
+    var diet = form.diet;
+
+    for (let i = 0; i <diet.length; i++) {
+        if (diet[i].checked) {
+            values.push(diet[i].value);
+        }
+    }
+    return values;
+}
+
+
 
 async function getRecipe(reqRecipe, reqParameters){
     let response = await fetch(reqRecipe+SPOONACULAR_KEY+reqParameters);
@@ -19,10 +34,17 @@ async function getRecipe(reqRecipe, reqParameters){
 
     console.log(recipe);
 
-    window.location.href="recipe.html"
+    // window.location.href="recipe.html"
 };
 
-document.getElementById("submit-btn").addEventListener("click",function (){getRecipe(ASK_RANDOM_RECIPE, reqParams)})
+document.getElementById("submit-btn").addEventListener("click", function (){
+    // reqIntolerances.push(RECIPE_INTOLERANCES),
+    reqDiet = getCheckboxValues(document.getElementById("random__form")),
+
+
+    reqParams = "&intolerances="+reqIntolerances+"&diet="+reqDiet+"&type="+reqType,
+    getRecipe(ASK_RANDOM_RECIPE, reqParams)
+})
 
 
 // document.addEventListener('DOMContentLoaded', function() {

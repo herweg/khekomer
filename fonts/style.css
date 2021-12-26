@@ -164,7 +164,7 @@ input.collapsible__menu-checkbox {
 #intolerances:checked ~ .menu__intolerances{
     max-height: 100%;
 }
-#diet:checked ~ .menu__intolerances{
+#diet-collapsible:checked ~ .menu__intolerances{
     max-height: 100%;
 }
 #type:checked ~ .menu__intolerances{
