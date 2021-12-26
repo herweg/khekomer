@@ -123,7 +123,9 @@ header{
 }
 
 .section-main__content .column-left{
-    width: 195px;
+    float: left;
+    margin-left: 2rem;
+    width: 10rem;
 }
 
 .section-main__content .column-left input {
@@ -135,9 +137,9 @@ header{
 }
 
 .section-main__content .column-right{
-    margin-right: 3px;
     float: right;
-    width: 195px;
+    margin-right: 3rem;
+    width: 10rem;
 }
 
 .section-main__content img{
@@ -170,6 +172,41 @@ input.collapsible__menu-checkbox {
 #type:checked ~ .menu__intolerances{
     max-height: 100%;
 }
+
+/* FORMS */
+
+.form__label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(0rem);
+}
+  
+.form__input {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 0.75rem;
+    margin: 0 auto;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+}
+  
+.form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+}
+
 
 /* RECIPE */
 
