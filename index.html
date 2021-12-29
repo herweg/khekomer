@@ -55,19 +55,29 @@
         </p>
         <p class="section-main__tips"></p>
         <div class="section-main__content">
-          <div class="column-left">
-            <input type="text" class="form__input" name="carbohidratos" placeholder="Carbohidratos" /><label for="carbohidratos" class="form__label"></label><a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-            <input type="text" class="form__input" name="proteinas" placeholder="Proteinas" /><label for="proteinas" class="form__label"></label><a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-            <input type="text" class="form__input" name="grasas-totales" placeholder="Grasas totales" /><label for="grasas-totales" class="form__label"></label><a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-            <input type="text" class="form__input" name="grasas-saturadas" placeholder="Grasas saturadas" /><label for="grasas-saturadas" class="form__label"></label><a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-          </div>
-          <button>Send</button>
-          <div class="column-right">
-            <input type="text" class="form__input" name="intolerancias" placeholder="Intolerancias" /><label for="intolerancias" class="form__label"></label><a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-            <input type="text" class="form__input" name="colesterol" placeholder="Colesterol" /><label for="colesterol" class="form__label"></label><a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-            <input type="text" class="form__input" name="fibras" placeholder="Fibras" /><label for="fibras" class="form__label"></label><a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-            <input type="text" class="form__input" name="acido-folico" placeholder="Acido fólico" /><label for="acido-folico" class="form__label"></label><a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-          </div>
+          <form id="form_properties" action="#" onsubmit="return false">
+            <div class="column-left">
+              <label for="carbohidratos" class="form__label">Carbohidratos</label><input type="text" class="form__input" name="carbohidratos"/>
+              <label for="proteinas" class="form__label">Proteinas</label><input type="text" class="form__input" name="proteinas"/>
+              <label for="fibras" class="form__label">Fibras</label><input type="text" class="form__input" name="fibras"/>
+              <input type="checkbox" class="collapsible__menu-checkbox" id="properties_intolerances"><label for="intolerances">↕Intolerances↕</label>
+              <div class="menu__intolerances">
+                <input type="checkbox" name="diet" value="Egg"/><label for="Egg">Egg</label><br/>
+                <input type="checkbox" name="diet" value="Gluten"/><label for="Gluten">Gluten</label><br/>
+                <input type="checkbox" name="diet" value="Peanut"/><label for="Peanut">Peanut</label><br/>
+                <input type="checkbox" name="diet" value="Seafood"/><label for="Seafood">Seafood</label><br/>
+                <input type="checkbox" name="diet" value="Tree Nut"/><label for="Tree Nut">Tree Nut</label><br/>
+                <input type="checkbox" name="diet" value="Wheat"/><label for="Wheat">Wheat</label><br/>
+              </div>
+            </div>
+            <button>Send</button>
+            <div class="column-right">
+              <label for="grasas-totales" class="form__label">Grasas Totales</label><input type="text" class="form__input" name="grasas-totales"/>
+              <label for="grasas-saturadas" class="form__label">Grasas Saturadas</label><input type="text" class="form__input" name="grasas-saturadas"/>
+              <label for="colesterol" class="form__label">Colesterol</label><input type="text" class="form__input" name="colesterol"/>
+              <label for="acido-folico" class="form__label">Acido Folico</label><input type="text" class="form__input" name="acido-folico"/>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -82,18 +92,18 @@
         </p>
         <p class="section-main__tips"></p>
         <div class="section-main__content">
-          <div class="column-left">
-            <input type="text" class="form__input" placeholder="Carbohidratos" />
-            <a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-            <input type="text" class="form__input" placeholder="Proteinas" />
-            <a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-            <input type="text" class="form__input" placeholder="Grasas totales" />
-            <a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-            <input type="text" class="form__input" placeholder="Grasas saturadas" />
-            <a href=""><img src="/img/close_ring_duotone.png" alt="" /></a>
-          </div>
-          <button>Send</button>
-          <div class="column-right"></div>
+          <form id="form_ingredients" action="#" onsubmit="return false">
+            <div class="column-left">
+              <label class="form__label" for="carbohidratos">Carbohidratos</label><input type="text" class="form__input" name="carbohidratos" />
+              <label class="form__label" for="proteinas">Proteinas</label><input type="text" class="form__input" name="proteinas" />
+            </div>
+          </form> 
+            <button id="ingredients-btn">Send</button>
+            <div class="column-right">
+            
+              <label class="form__label" for="grasas-totales">Grasas-totales</label><input type="text" class="form__input" name="grasas-totales" />
+              <label class="form__label" for="grasas-saturadas">Grasas-saturadas</label><input type="text" class="form__input" name="grasas-saturadas" />
+            </div>                      
         </div>
       </div>
 
@@ -110,53 +120,48 @@
 
         <div class="section-main__content">
           <div class="column-left">
-            <form id="random__form" action="#" onsubmit="return false">
-              <div class="collapsible__menu">
-                <input type="checkbox" class="collapsible__menu-checkbox" id="intolerances"><label for="intolerances">↕
-                  Intolerances ↕</label>
+            
+            <div class="collapsible__menu">
+              <form id="form_random_intolerances" action="#" onsubmit="return false">
+                <input type="checkbox" class="collapsible__menu-checkbox" id="intolerances"><label for="intolerances">↕Intolerances↕</label>
                 <div class="menu__intolerances">
-                  <input type="checkbox" name="intolerances" value="Egg" id="testintoler" /><label
-                    for="Egg">Egg</label><br />
-                  <input type="checkbox" name="intolerances" value="Gluten" /><label for="Gluten">Gluten</label><br />
-                  <input type="checkbox" name="intolerances" value="Peanut" /><label for="Peanut">Peanut</label><br />
-                  <input type="checkbox" name="intolerances" value="Seafood" /><label
-                    for="Seafood">Seafood</label><br />
-                  <input type="checkbox" name="intolerances" value="Tree Nut" /><label for="Tree Nut">Tree
-                    Nut</label><br />
-                  <input type="checkbox" name="intolerances" value="Wheat" /><label for="Wheat">Wheat</label><br />
+                  <input type="checkbox" name="diet" value="Egg"><label for="Egg">Egg</label><br/>
+                  <input type="checkbox" name="diet" value="Gluten"/><label for="Gluten">Gluten</label><br/>
+                  <input type="checkbox" name="diet" value="Peanut"/><label for="Peanut">Peanut</label><br/>
+                  <input type="checkbox" name="diet" value="Seafood"/><label for="Seafood">Seafood</label><br/>
+                  <input type="checkbox" name="diet" value="Tree Nut"/><label for="Tree Nut">Tree Nut</label><br/>
+                  <input type="checkbox" name="diet" value="Wheat"/><label for="Wheat">Wheat</label><br/>
                 </div>
-              </div>
+              </form>
+            </div>
 
-              <div class="collapsible__menu">
+            <div class="collapsible__menu">
+              <form id="form_random_diet" action="#" onsubmit="return false">
                 <input type="checkbox" class="collapsible__menu-checkbox" id="diet-collapsible"><label for="diet-collapsible">↕ Diet ↕</label>
                 <div class="menu__intolerances">
-                  <input type="checkbox" id="intolerances-gluten" name="diet" value="gluten" /><label for="Gluten Free">Gluten
-                    Free</label><br />
-                  <input type="checkbox" name="diet" value="vegetarian" /><label
-                    for="Vegetarian">Vegetarian</label><br />
-                  <input type="checkbox" name="diet" value="vegan" /><label for="Vegan">Vegan</label><br />
+                  <input type="checkbox" name="diet" value="gluten"/><label for="Gluten Free">Gluten Free</label><br/>
+                  <input type="checkbox" name="diet" value="vegetarian"/><label for="Vegetarian">Vegetarian</label><br/>
+                  <input type="checkbox" name="diet" value="vegan"/><label for="Vegan">Vegan</label><br/>
                 </div>
-              </div>
+              </form>
+            </div>
 
-              <div class="collapsible__menu">
-                <input type="checkbox" class="collapsible__menu-checkbox" id="type"><label for="type">↕ Meal Type
-                  ↕</label>
+            <div class="collapsible__menu">
+              <form id="form_random_type" action="#" onsubmit="return false">
+                <input type="checkbox" class="collapsible__menu-checkbox" id="type"><label for="type">↕ Meal Type ↕</label>
                 <div class="menu__intolerances">
-                  <input type="checkbox" name="type" value="main course" /><label for="main course">main
-                    course</label><br />
-                  <input type="checkbox" name="type" value="side dish" /><label for="side dish">side
-                    dish</label><br />
-                  <input type="checkbox" name="type" value="dessert" /><label for="dessert">dessert</label><br />
-                  <input type="checkbox" name="type" value="breakfast" /><label for="breakfast">breakfast</label><br />
-                  <input type="checkbox" name="type" value="salad" /><label for="salad">salad</label><br />
-                  <input type="checkbox" name="type" value="soup" /><label for="soup">soup</label><br />
-                  <input type="checkbox" name="type" value="snack" /><label for="snack">snack</label><br />
+                  <input type="checkbox" name="diet" value="main course" /><label for="main course">main course</label><br />
+                  <input type="checkbox" name="diet" value="side dish" /><label for="side dish">side dish</label><br />
+                  <input type="checkbox" name="diet" value="dessert" /><label for="dessert">dessert</label><br />
+                  <input type="checkbox" name="diet" value="breakfast" /><label for="breakfast">breakfast</label><br />
+                  <input type="checkbox" name="diet" value="salad" /><label for="salad">salad</label><br />
+                  <input type="checkbox" name="diet" value="soup" /><label for="soup">soup</label><br />
+                  <input type="checkbox" name="diet" value="snack" /><label for="snack">snack</label><br />
                 </div>
-              </div>
-              
-            </form>
+              </form>
+            </div>
           </div>
-          <button form="random__form" id="submit-btn">Send</button>
+          <button id="random-btn">Send</button>
           <div class="column-right">
             <!-- <input type="text" placeholder="Intolerancias"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
                         <input type="text" placeholder="Colesterol"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>

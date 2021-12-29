@@ -23,8 +23,6 @@ function getCheckboxValues(form){
     return values;
 }
 
-
-
 async function getRecipe(reqRecipe, reqParameters){
     let response = await fetch(reqRecipe+SPOONACULAR_KEY+reqParameters);
     recipe = await response.json();
@@ -34,29 +32,14 @@ async function getRecipe(reqRecipe, reqParameters){
 
     console.log(recipe);
 
-    // window.location.href="recipe.html"
+    //window.location.href="recipe.html"
 };
 
-document.getElementById("submit-btn").addEventListener("click", function (){
+document.getElementById("random-btn").addEventListener("click", function (){
     // reqIntolerances.push(RECIPE_INTOLERANCES),
-    reqDiet = getCheckboxValues(document.getElementById("random__form")),
-
-
+    reqIntolerances = getCheckboxValues(document.getElementById("form_random_intolerances")),
+    reqDiet = getCheckboxValues(document.getElementById("form_random_diet")),
+    reqType = getCheckboxValues(document.getElementById("form_random_type")),
     reqParams = "&intolerances="+reqIntolerances+"&diet="+reqDiet+"&type="+reqType,
     getRecipe(ASK_RANDOM_RECIPE, reqParams)
 })
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-
-// });
-
-// var form = document.getElementById("random__form");
-//     inputs = form.getElementsByTagName
-
-//     https://stackoverflow.com/questions/7400325/how-to-add-the-values-from-checkboxes-to-an-array
-
-
-// function getParameters(){
-//     reqIntolerances.push(document.getElementById("testintoler").value);
-// };
