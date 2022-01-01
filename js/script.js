@@ -32,7 +32,7 @@ async function getRecipe(reqRecipe, reqParameters){
 
     console.log(recipe);
 
-    //window.location.href="recipe.html"
+    window.location.href="recipe.html"
 };
 
 document.getElementById("random-btn").addEventListener("click", function (){
