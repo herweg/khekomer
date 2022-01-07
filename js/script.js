@@ -11,11 +11,11 @@ var reqIntolerances = [];
 var reqDiet = [];
 var reqType = [];
 
-function getCheckboxValues(form){
-    var values= [];
+function getCheckboxValues(form) {
+    var values = [];
     var diet = form.diet;
 
-    for (let i = 0; i <diet.length; i++) {
+    for (let i = 0; i < diet.length; i++) {
         if (diet[i].checked) {
             values.push(diet[i].value);
         }
@@ -23,23 +23,23 @@ function getCheckboxValues(form){
     return values;
 }
 
-async function getRecipe(reqRecipe, reqParameters){
-    let response = await fetch(reqRecipe+SPOONACULAR_KEY+reqParameters);
+async function getRecipe(reqRecipe, reqParameters) {
+    let response = await fetch(reqRecipe + SPOONACULAR_KEY + reqParameters);
     recipe = await response.json();
 
     let recipeStored = JSON.stringify(recipe);
-    sessionStorage.setItem("recipe",recipeStored);
+    sessionStorage.setItem("recipe", recipeStored);
 
     console.log(recipe);
 
-    window.location.href="recipe.html"
+    window.location.href = "recipe.html"
 };
 
-document.getElementById("random-btn").addEventListener("click", function (){
+document.getElementById("random-btn").addEventListener("click", function () {
     // reqIntolerances.push(RECIPE_INTOLERANCES),
     reqIntolerances = getCheckboxValues(document.getElementById("form_random_intolerances")),
-    reqDiet = getCheckboxValues(document.getElementById("form_random_diet")),
-    reqType = getCheckboxValues(document.getElementById("form_random_type")),
-    reqParams = "&intolerances="+reqIntolerances+"&diet="+reqDiet+"&type="+reqType,
-    getRecipe(ASK_RANDOM_RECIPE, reqParams)
-})
+        reqDiet = getCheckboxValues(document.getElementById("form_random_diet")),
+        reqType = getCheckboxValues(document.getElementById("form_random_type")),
+        reqParams = "&intolerances=" + reqIntolerances + "&diet=" + reqDiet + "&type=" + reqType,
+        getRecipe(ASK_RANDOM_RECIPE, reqParams)
+});
