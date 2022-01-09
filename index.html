@@ -66,14 +66,14 @@
               <label class="form__label" for="grasas-saturadas">Grasas Saturadas</label><input type="text" class="form__input" name="grasas-saturadas"/>
               <label class="form__label" for="colesterol">Colesterol</label><input type="text" class="form__input" name="colesterol"/>
             </div>
-            <div class="column column-tags">
+            <div class="column column-tags prop-tags">
               <p>Tags:</p>
-              <input hidden type="checkbox" name="diet" value="Egg" id="diet-egg"/><label for="diet-egg">Egg</label>
-              <input hidden type="checkbox" name="diet" value="Gluten" id="diet-gluten"/><label for="diet-gluten">Gluten-free</label>
-              <input hidden type="checkbox" name="diet" value="Peanut" id="diet-peanut"/><label for="diet-peanut">Peanut</label>
-              <input hidden type="checkbox" name="diet" value="Seafood" id="diet-seafood"/><label for="diet-seafood">Seafood</label>
-              <input hidden type="checkbox" name="diet" value="Tree Nut" id="diet-nut"/><label for="diet-nut">Tree Nut</label>
-              <input hidden type="checkbox" name="diet" value="Wheat" id="diet-wheat"/><label for="diet-wheat">Wheat</label>
+              <input hidden type="checkbox" name="diet" value="Egg" id="properties-diet-egg"/><label for="properties-diet-egg">Egg</label>
+              <input hidden type="checkbox" name="diet" value="Gluten" id="properties-diet-gluten"/><label for="properties-diet-gluten">Gluten-free</label>
+              <input hidden type="checkbox" name="diet" value="Peanut" id="properties-diet-peanut"/><label for="properties-diet-peanut">Peanut</label>
+              <input hidden type="checkbox" name="diet" value="Seafood" id="properties-diet-seafood"/><label for="properties-diet-seafood">Seafood</label>
+              <input hidden type="checkbox" name="diet" value="Tree Nut" id="properties-diet-nut"/><label for="properties-diet-nut">Tree Nut</label>
+              <input hidden type="checkbox" name="diet" value="Wheat" id="properties-diet-wheat"/><label for="properties-diet-wheat">Wheat</label>
             </div>
             <button>Send</button>
           </div>
@@ -90,31 +90,29 @@
           ¿De cuantas formas podrán combinarse?
         </p>
         <p class="section-main__tips"></p>
-        <div class="section-main__content">
-          <form id="form_ingredients" action="#" onsubmit="return false">
+        <form id="form_ingredients" action="#" onsubmit="return false">
+          <div class="section-main__content">
             <div class="column column-left">
               <label class="form__label" for="carbohidratos">Carbohidratos</label><input type="text" class="form__input" name="carbohidratos" />
               <label class="form__label" for="proteinas">Proteinas</label><input type="text" class="form__input" name="proteinas" />
             </div>
-          </form> 
-          <button id="ingredients-btn">Send</button>
-          <div class="column column-right">
-          
-            <label class="form__label" for="grasas-totales">Grasas-totales</label><input type="text" class="form__input" name="grasas-totales" />
-            <label class="form__label" for="grasas-saturadas">Grasas-saturadas</label><input type="text" class="form__input" name="grasas-saturadas" />
+            <button id="ingredients-btn">Send</button>
+            <div class="column column-right">
+              <label class="form__label" for="grasas-totales">Grasas-totales</label><input type="text" class="form__input" name="grasas-totales" />
+              <label class="form__label" for="grasas-saturadas">Grasas-saturadas</label><input type="text" class="form__input" name="grasas-saturadas" />
+            </div>
+            <div class="column column-tags">
+              <p>Tags:</p>
+              <input hidden type="checkbox" name="diet" value="Egg" id="diet-egg"/><label for="diet-egg">Egg</label>
+              <input hidden type="checkbox" name="diet" value="Gluten" id="diet-gluten"/><label for="diet-gluten">Gluten-free</label>
+              <input hidden type="checkbox" name="diet" value="Peanut" id="diet-peanut"/><label for="diet-peanut">Peanut</label>
+              <input hidden type="checkbox" name="diet" value="Seafood" id="diet-seafood"/><label for="diet-seafood">Seafood</label>
+              <input hidden type="checkbox" name="diet" value="Tree Nut" id="diet-nut"/><label for="diet-nut">Tree Nut</label>
+              <input hidden type="checkbox" name="diet" value="Wheat" id="diet-wheat"/><label for="diet-wheat">Wheat</label>
+            </div>
           </div>
-          <div class="column column-tags">
-            <p>Tags:</p>
-            <input hidden type="checkbox" name="diet" value="Egg" id="diet-egg"/><label for="diet-egg">Egg</label>
-            <input hidden type="checkbox" name="diet" value="Gluten" id="diet-gluten"/><label for="diet-gluten">Gluten-free</label>
-            <input hidden type="checkbox" name="diet" value="Peanut" id="diet-peanut"/><label for="diet-peanut">Peanut</label>
-            <input hidden type="checkbox" name="diet" value="Seafood" id="diet-seafood"/><label for="diet-seafood">Seafood</label>
-            <input hidden type="checkbox" name="diet" value="Tree Nut" id="diet-nut"/><label for="diet-nut">Tree Nut</label>
-            <input hidden type="checkbox" name="diet" value="Wheat" id="diet-wheat"/><label for="diet-wheat">Wheat</label>
-          </div>
-        </div>
+        </form>
       </div>
-
 
       <div class="section-main">
         <h2 class="section-main__title">Sorprendeme!</h2>
@@ -125,58 +123,34 @@
           como para animarte a probarla?
         </p>
         <p class="section-main__tips"></p>
-
+        <form action="#" id="random" onsubmit="return false">
         <div class="section-main__content">
-          <div class="column column-left">
-            
-            <div class="collapsible__menu">
-              <form id="form_random_intolerances" action="#" onsubmit="return false">
-                <input type="checkbox" class="collapsible__menu-checkbox" id="intolerances"><label for="intolerances">↕Intolerances↕</label>
-                <div class="menu__intolerances">
-                  <input type="checkbox" name="diet" value="Egg"><label for="Egg">Egg</label><br/>
-                  <input type="checkbox" name="diet" value="Gluten"/><label for="Gluten">Gluten</label><br/>
-                  <input type="checkbox" name="diet" value="Peanut"/><label for="Peanut">Peanut</label><br/>
-                  <input type="checkbox" name="diet" value="Seafood"/><label for="Seafood">Seafood</label><br/>
-                  <input type="checkbox" name="diet" value="Tree Nut"/><label for="Tree Nut">Tree Nut</label><br/>
-                  <input type="checkbox" name="diet" value="Wheat"/><label for="Wheat">Wheat</label><br/>
-                </div>
-              </form>
-            </div>
-
-            <div class="collapsible__menu">
-              <form id="form_random_diet" action="#" onsubmit="return false">
-                <input type="checkbox" class="collapsible__menu-checkbox" id="diet-collapsible"><label for="diet-collapsible">↕ Diet ↕</label>
-                <div class="menu__intolerances">
-                  <input type="checkbox" name="diet" value="gluten"/><label for="Gluten Free">Gluten Free</label><br/>
-                  <input type="checkbox" name="diet" value="vegetarian"/><label for="Vegetarian">Vegetarian</label><br/>
-                  <input type="checkbox" name="diet" value="vegan"/><label for="Vegan">Vegan</label><br/>
-                </div>
-              </form>
-            </div>
-
-            <div class="collapsible__menu">
-              <form id="form_random_type" action="#" onsubmit="return false">
-                <input type="checkbox" class="collapsible__menu-checkbox" id="type"><label for="type">↕ Meal Type ↕</label>
-                <div class="menu__intolerances">
-                  <input type="checkbox" name="diet" value="main course" /><label for="main course">main course</label><br />
-                  <input type="checkbox" name="diet" value="side dish" /><label for="side dish">side dish</label><br />
-                  <input type="checkbox" name="diet" value="dessert" /><label for="dessert">dessert</label><br />
-                  <input type="checkbox" name="diet" value="breakfast" /><label for="breakfast">breakfast</label><br />
-                  <input type="checkbox" name="diet" value="salad" /><label for="salad">salad</label><br />
-                  <input type="checkbox" name="diet" value="soup" /><label for="soup">soup</label><br />
-                  <input type="checkbox" name="diet" value="snack" /><label for="snack">snack</label><br />
-                </div>
-              </form>
-            </div>
+          <div class="column column-tags random-tags">
+            <input hidden type="checkbox" name="diet" value="Egg" id="random-egg"/><label for="random-egg">Egg</label>
+            <input hidden type="checkbox" name="diet" value="Gluten" id="random-gluten"/><label for="random-gluten">Gluten</label>
+            <input hidden type="checkbox" name="diet" value="Peanut" id="random-peanut"/><label for="random-peanut">Peanut</label>
+            <input hidden type="checkbox" name="diet" value="Seafood" id="random-seafood"/><label for="random-seafood">Seafood</label>
+            <input hidden type="checkbox" name="diet" value="Tree Nut" id="random-nut"/><label for="random-nut">Tree Nut</label>
+            <input hidden type="checkbox" name="diet" value="Wheat" id="random-wheat"/><label for="random-wheat">Wheat</label>
+          </div>
+          <div class="column column-tags random-tags">
+            <input hidden type="checkbox" name="diet" value="gluten" id="random-gluten-free"/><label for="random-gluten-free">Gluten Free</label>
+            <input hidden type="checkbox" name="diet" value="vegetarian" id="random-vegetarian"/><label for="random-vegetarian">Vegetarian</label>
+            <input hidden type="checkbox" name="diet" value="vegan" id="random-vegan"/><label for="random-vegan">Vegan</label>
+          </div>
+          <div class="column column-tags random-tags">
+            <input hidden type="checkbox" name="diet" value="main course" id="random-main" /><label for="random-main">main course</label>
+            <input hidden type="checkbox" name="diet" value="side dish" id="random-side" /><label for="random-side">side dish</label>
+            <input hidden type="checkbox" name="diet" value="dessert" id="random-dessert" /><label for="random-dessert">dessert</label>
+            <input hidden type="checkbox" name="diet" value="breakfast" id="random-breakfast" /><label for="random-breakfast">breakfast</label>
+            <input hidden type="checkbox" name="diet" value="salad" id="random-salad" /><label for="random-salad">salad</label>
+            <input hidden type="checkbox" name="diet" value="soup" id="random-soup" /><label for="random-soup">soup</label>
+            <input hidden type="checkbox" name="diet" value="snack" id="random-snack" /><label for="random-snack">snack</label>
           </div>
           <button id="random-btn">Send</button>
-          <div class="column column-right">
-            <!-- <input type="text" placeholder="Intolerancias"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
-                        <input type="text" placeholder="Colesterol"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a>
-                        <input type="text" placeholder="Fibras"><a href=""><img src="/img/close_ring_duotone.png" alt=""></a> -->
-          </div>
         </div>
       </div>
+      </form>
     </div>
   </main>
 

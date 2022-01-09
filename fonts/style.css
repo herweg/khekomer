@@ -7,8 +7,8 @@
     --secondary-color:var(--secondary-color);
     --background-color:#A88863;
     --title-color:#362E25;
-    --checked-color:#85A8A0;
-    --unchecked-color:#B5F5E5;
+    --checked-color:#B5F5E5;
+    --unchecked-color:#85A8A0;
 }
 
 /* 
@@ -139,7 +139,17 @@ header{
 .section-main__content .column-tags{
     display: grid;
     grid-template-rows: repeat(7, minmax(30px,1fr));
+    height: 200px;
+    padding: 0 4vw 0 4vw;
+}
+
+.section-main__content .prop-tags{
     grid-area: col3;
+}
+
+.random-tags{
+    display: grid;
+    grid-template-rows: repeat(7, minmax(30px,1fr));
     height: 200px;
     padding: 0 4vw 0 4vw;
 }
@@ -178,10 +188,9 @@ header{
     font-size: 0.55rem;
     margin: 0 auto;
     padding: 0.25rem 0.75rem;
-    border-radius: 1.2rem;
+    border-radius: 15px;
     background-color: rgb(255, 255, 255);
-    border: none;
-    width: 90%;
+    border: #85A8A0;
     display: block;
     border-bottom: 0.3rem solid transparent;
     transition: all 0.3s;
